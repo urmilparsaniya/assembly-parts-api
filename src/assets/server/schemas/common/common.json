@@ -1,0 +1,144 @@
+{
+  "$id": "common",
+  "definitions": {
+    "id": {
+      "type": "number"
+    },
+    "ids": {
+      "type": "number"
+    },
+    "string-id": {
+      "type": "string",
+      "pattern": "^[^|]*$"
+    },
+    "string-ids": {
+      "type": "string",
+      "pattern": "^(([^|]*)(\\||[^|])*)?$"
+    },
+    "number-id": {
+      "type": "number"
+    },
+    "number-ids": {
+      "type": "string",
+      "pattern": "^(\\d\\|?)*$"
+    },
+    "tariff-id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36,
+      "nullable": true
+    },
+    "search": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "sortFields": {
+      "type": "string"
+    },
+    "onlyRecordCount": {
+      "type": "boolean"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "address1": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "address2": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "postalCode": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "city": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "department": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "region": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "country": {
+          "type": "string",
+          "sanitize": "mongo"
+        },
+        "coordinates": {
+          "type": "array",
+          "sanitize": "mongo"
+        }
+      }
+    },
+    "acceptEula": {
+      "type": "boolean",
+      "sanitize": "mongo"
+    },
+    "captcha": {
+      "type": "string",
+      "sanitize": "mongo"
+    },
+    "language": {
+      "type": "string"
+    },
+    "LocLongitude": {
+      "type": "number",
+      "format": "longitude"
+    },
+    "LocLatitude": {
+      "type": "number",
+      "format": "latitude"
+    },
+    "LocMaxDistanceMeters": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "transform": [
+        "toLowerCase"
+      ],
+      "field": "email",
+      "term": "Email"
+    },
+    "createdBy": {
+      "type": "object",
+      "nullable": true,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "object",
+      "nullable": true
+    },
+    "lastChangedBy": {
+      "type": "object",
+      "nullable": true,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        }
+      }
+    },
+    "updatedAt": {
+      "type": "object",
+      "nullable": true
+    }
+  }
+}

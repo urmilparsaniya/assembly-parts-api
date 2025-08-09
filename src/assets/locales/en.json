@@ -1,0 +1,7 @@
+{
+  "account": {
+    "register": {
+      "successfully": "Your account has been successfully created. Please confirm your email address to activate your account."
+    }
+  }
+}

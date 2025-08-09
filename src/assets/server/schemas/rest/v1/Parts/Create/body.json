@@ -1,0 +1,38 @@
+{
+  "$id": "create-part-body",
+  "type": "object",
+  "title": "Create Part Body",
+  "required": ["name", "type"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the part."
+    },
+    "type": {
+      "type": "number",
+      "description": "The type of the part, represented as a number."
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "description": "An array of part objects, each representing a part ID or details."
+      },
+      "description": "An array of parts associated with this part."
+    }
+  },
+  "additionalProperties": false,
+  "removeAdditional": true,
+   "if": {
+    "properties": { "type": { "const": 1 } }
+  },
+  "then": {
+    "required": ["parts"]
+  },
+  "else": {
+    "not": {
+      "required": ["parts"]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"/>
+    <title>Title</title>
+    <style>
+        body {
+            background: #fafafa;
+            text-align: center;
+            padding: 124px 0;
+            font-family: 'Jost', sans-serif;
+        }
+
+        .logo {
+            margin-bottom: 32px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .verifyBox {
+            background: #ffffff;
+            padding: 48px;
+            max-width: 632px;
+            text-align: left;
+            margin: 32px auto;
+            width: 100%;
+        }
+
+        .title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.02em;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin-bottom: 56px;
+        }
+
+        .linkbutton {
+            padding: 16px 32px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            border-radius: 4px;
+            background: #235584;
+            outline: none;
+            border: 1px solid #235584;
+            text-decoration: none;
+        }
+
+        .horizontalLine {
+            border: 1px solid #cccccc;
+            margin: 64px 0 42px 0;
+        }
+
+        .description.mb-0 {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #333333;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://devmedia.duka365.com/DukaLogo.png" alt="DUKA LOGO" class="logo img-fluid"
+         style="margin-bottom: 32px; max-width: 100%; height: auto"/>
+</header>
+<main>
+    <div class="verifyBox">
+        <h4 class="title">Hello {{name}},</h4>
+        <p class="description">{{message}}</p>
+        <a href="{{link}}" target="_blank" class="linkbutton">Confirm Account</a>
+        <div class="horizontalLine"></div>
+        <p class="description mb-0">Thank You,</p>
+        <p class="description mb-0">Team SGC Duka</p>
+        <img src="https://devmedia.duka365.com/FaceBook.svg" alt="Face Book" style="margin: 0 10px 0 0"/>
+        <img src="https://devmedia.duka365.com/Twitter.svg" alt="Twitter" style="margin: 0 10px 0 0"/>
+        <img src="https://devmedia.duka365.com/Instagram.svg" alt="Instagram"/>
+    </div>
+</main>
+<footer>
+    <div>
+        <p class="description mb-0">© 2024 SGC Duka. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
